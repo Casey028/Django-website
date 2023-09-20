@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content%}
+{%load static%}
+<title>網站介紹</title>
+<style type="text/css">
+  .intro{
+    text-align: center;
+    margin-top:60px;
+  }
+  
+  h2{
+    line-height:100px;
+    text-align: center;
+  }
+  .content{
+    border:6px #ccc solid;
+    background-image: url({% static 'images/1112.jpg' %});
+    background-size:cover;
+    display: inline-block;
+    width:50%;
+    padding:40px;
+    font-size:19px;
+    font-weight:bold;
+  }
+  #f{
+    text-align: center;
+  }
+  #s{
+    text-align: right;
+  }
+</style>
+<div class="intro">
+  <h2>創立理念</h2>
+  <div class='content'>
+    <p id="f">因應各大學通識及選修課，開放多種不同系所不同年級學生進行選修，有時需要快速排列出所有學生沒有修課的時間，以多數至少數，進行查詢空堂。<br>
+      我們這次製作的專題，針對這需求所製作的，參考排成管理和搜尋引擎的概念，使用Django來製作網頁來呈現，希望使用者可以只通過選擇時間和群組，就可以透過我們做好的網頁快速的查詢。<br><br>
+      空堂查詢網頁主要針對學生或者是老師們方便去找自己群組裡的大家共同有空的時間，老師可以依照課堂成員去直接做查詢，資料來源可以依靠學校現有的學生、老師的課表資料庫去進行查詢，<br>如果是學生想進行小組的查詢，也可以創立一個群組去做查詢，資訊量龐大，如果沒有適當的搜尋引擎，想找出需要的資訊可能需要多花費多一點時間，效率也可能不如預期。<br><br><br>
+      
+    </p>
+    <p id="s">製作人  :  黎安綺<br>陳品蓉</p>
+  </div>
+</div>
+{% endblock %}

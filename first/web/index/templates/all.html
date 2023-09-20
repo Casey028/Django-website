@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% block content%}
+<title>查詢所有</title>
+<style type="text/css">
+   
+    .container{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        margin-top:60px;
+    }
+    .free{
+        font-size:19px;
+        text-align: center;
+        width:98%;
+        margin-bottom:40px;
+    }
+    .col-25{
+        width: 400px;
+        display: block;
+        margin:20px 0 5px 0;
+    }
+    label {
+        display: inline-block;
+        width: 100px;
+        text-align: left;
+        font-size:19px;
+    }
+    .col-25 input{
+        vertical-align: top;
+        font-size:19px;
+    }   
+    select{
+        font-size: 19px;   
+    }
+
+</style>
+    <div class="container">
+          <form action="" method="get">
+          <div class="box">
+              <div class="col-25">
+                   <label for="">班級 : </label>
+                    <select name='semester'>
+                        <option displayed="True" select>請選擇班級</option>                  
+                        
+                        <option value='110-1'>資管甲</option>
+                        
+                        <option value='110-2'>資管乙</option>
+                       
+                    </select>
+                   &emsp;
+                   <input type="submit" value="查詢" >
+              </div>
+             
+                 
+                
+           </div>
+             
+              
+          </div>
+          </form>
+    </div>
+    
+    <div class="free">
+    
+    {% if mon%}
+       
+          <h3>總修課人數 : {{count}} </h3>
+       
+          <table border="1" align="center" cellpadding="10" width="60%" >
+            <thead>
+               <tr>
+                <th>&nbsp;</th>
+                <th>一</th>
+                <th>二</th>
+                <th>三</th>
+                <th>四</th>
+                <th>五</th>
+                
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td >第 一 節<br>0810-0900<br></td>
+                  <td >{{mon.0}}</td>
+                  <td >{{tue.0}}</td>
+                  <td >{{wed.0}}</td>
+                  <td >{{thu.0}}</td>
+                  <td >{{fri.0}}</td>
+                </tr>
+                <tr>
+                    <td >第 二 節<br>0910-1000<br></td>
+                    <td>{{mon.1}}</td>
+                    <td>{{tue.1}}</td>
+                    <td>{{wed.1}}</td>
+                    <td>{{thu.1}}</td>
+                    <td>{{fri.1}}</td>
+                </tr>
+                <tr>
+                    <td >第 三 節<br>1010-1100<br></td>
+                    <td >{{mon.2}}</td>
+                    <td >{{tue.2}}</td>
+                    <td >{{wed.2}}</td>
+                    <td >{{thu.2}}</td>
+                    <td >{{fri.2}}</td>
+                  </tr>
+                <tr>
+                    <td >第 四 節<br>1110-1200<br></td>
+                    <td>{{mon.3}}</td>
+                    <td>{{tue.3}}</td>
+                    <td>{{wed.3}}</td>
+                    <td>{{thu.3}}</td>
+                    <td>{{fri.3}}</td>
+                </tr>
+                <tr>
+                    <td >第 五 節<br>1330-1420<br></td>
+                    <td >{{mon.4}}</td>
+                    <td >{{tue.4}}</td>
+                    <td >{{wed.4}}</td>
+                    <td >{{thu.4}}</td>
+                    <td >{{fri.4}}</td>
+                </tr>
+                <tr>
+                    <td >第 六 節<br>1430-1520<br></td>
+                    <td>{{mon.5}}</td>
+                    <td>{{tue.5}}</td>
+                    <td>{{wed.5}}</td>
+                    <td>{{thu.5}}</td>
+                    <td>{{fri.5}}</td>
+                </tr>
+                <tr>
+                    <td >第 七 節<br>1530-1620<br></td>
+                    <td >{{mon.6}}</td>
+                    <td >{{tue.6}}</td>
+                    <td >{{wed.6}}</td>
+                    <td >{{thu.6}}</td>
+                    <td >{{fri.6}}</td>
+                </tr>
+                <tr>
+                    <td >第 八 節<br>1630-1720<br></td>
+                    <td>{{mon.7}}</td>
+                    <td>{{tue.7}}</td>
+                    <td>{{wed.7}}</td>
+                    <td>{{thu.7}}</td>
+                    <td>{{fri.7}}</td>
+                </tr>
+                
+              </tbody>
+             
+          </table>
+        
+        
+     {% endif%}
+    
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登出</title>
+    <style type="text/css">
+       
+        html,body{
+            height:100%;
+        }
+        body{
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .login{
+         width: 800px;
+         height:430px;
+         background-color:rgba(0,0,0,.2);
+         border-radius:10px;
+         border:10px solid #fff;
+         box-shadow:0 0 60px #000;
+         backdrop-filter: blur(5px);
+         display:flex;
+         justify-content:center;
+         align-items: center;
+         font-size:18px;
+       }
+       .container input{
+         width: 150px;
+         border-radius:6px;
+         line-height: 25px;
+         font-size: 16px;
+      }
+     .header{
+      margin-bottom:20px;
+      }
+    </style>
+</head>
+<body>
+    <div class="login">
+      <div class="container">
+        <div class ="btn2">
+          <h1>您已登出系統</h1>
+          
+        </div>
+        <div class ="btn2" style="text-align:center">
+           
+            <h2><a href="{%url 'Index'%}">重新登入</a></h2>
+          </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block content%}
+<title>課程查詢</title>
+<style type="text/css"> 
+    .container{ 
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        margin-bottom:10px;
+        margin-top:60px;
+        font-family:"Segoe UI";
+    }
+    .free{
+        margin-bottom:40px;
+        text-align: center;
+        width:95%;
+    }
+    .col-25{
+        width: 400px;
+        display: block;
+        margin:20px 0 5px 0;
+    }
+    label {
+        display: inline-block;
+        width: 100px;
+        text-align: left;
+        font-size:19px;
+    }
+    .col-25 input{
+        vertical-align: top;
+        font-size:19px;
+    }   
+  
+    select{
+        font-size: 19px;
+    }
+
+</style>
+    <div class="container">
+          <form action="" method="get">
+          <div class="box">
+              <div class="col-25">
+                   <label for="">班級 : </label>
+                    <select name='semester'>
+                        <option displayed="True" select>請選擇班級</option>                  
+                        
+                        <option value='110-1'>資管甲</option>
+                        
+                        <option value='110-2'>資管乙</option>
+                       
+                    </select>
+                   
+              </div>
+              <div class="col-25">
+                <label for="">星期 : </label>
+                
+                 <select name='week'>
+                     <option displayed="True" select>請選擇星期</option> 
+
+                     <option value='mon'>星期一</option>
+                     <option value='tue'>星期二</option>
+                     <option value='wed'>星期三</option>
+                     <option value='thu'>星期四</option>
+                     <option value='fri'>星期五</option>
+                 </select> 
+                 &emsp;
+                   <input type="submit" value="查詢" >
+                
+           </div>
+             
+              
+          </div>
+          </form>
+    </div>
+    
+    <div class="free">
+
+        {% if data%}
+          
+        <h4>第一堂  (可參與人數 : {{datas}}) </h4>
+         {%for row in data%}
+           {%with add as a%}
+              {{row.Name}}
+           {%endwith%}
+         {% endfor%}
+        
+        <h4>第二堂  (可參與人數 : {{datas2}}) </h4>
+        {%for row in data2%}
+          {%with add as a%}
+             {{row.Name}}
+          {%endwith%}
+        {% endfor%}
+      
+         <h4>第三堂  (可參與人數 : {{datas3}}) </h4>
+        {%for row in data3%}
+          {%with add as a%}
+             {{row.Name}}
+          {%endwith%}
+        {% endfor%}
+ 
+         <h4>第四堂  (可參與人數 : {{datas4}})</h4>  
+        {%for row in data4%}
+          {%with add as a%}
+            {{row.Name}}
+          {%endwith%}
+        {% endfor%}
+ 
+         <h4>第五堂  (可參與人數 : {{datas5}})</h4>
+         {%for row in data5%}
+           {%with add as a%}
+             {{row.Name}}
+           {%endwith%}
+         {% endfor%}
+
+         <h4>第六堂  (可參與人數 : {{datas5}})</h4>
+         {%for row in data5%}
+           {%with add as a%}
+             {{row.Name}}
+           {%endwith%}
+         {% endfor%}
+
+         <h4>第七堂  (可參與人數 : {{datas5}})</h4>
+         {%for row in data5%}
+           {%with add as a%}
+             {{row.Name}}
+           {%endwith%}
+         {% endfor%}
+
+         <h4>第八堂  (可參與人數 : {{datas5}})</h4>
+         {%for row in data5%}
+           {%with add as a%}
+             {{row.Name}}
+           {%endwith%}
+         {% endfor%}
+            
+     {% endif%}
+    </div>
+{% endblock %}
